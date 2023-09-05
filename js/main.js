@@ -5,11 +5,18 @@
  * @since   2019-08-19
  */
 
-(function main() {
-  'use strict'; // Demande un interprétation stricte du code
 
-  let a = 'Bonjour';
+'use strict'; // Demande un interprétation stricte du code
 
-  console.log(a);
-}()); // Main IIFE
+let degresCelicius = prompt('Quelle température veux tu transformer ?');
+
+if (isNaN(degresCelicius)) {
+    alert('Entrez un nombre !');
+} else {
+    degresCelicius = parseInt(degresCelicius);
+    let degresFahrenheit = degresCelicius * 9 / 5 + 32;
+    alert(`${degresCelicius}°C = ${degresFahrenheit}°F`);
+}
+
+
 
