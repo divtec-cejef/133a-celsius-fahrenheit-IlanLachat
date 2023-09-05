@@ -6,10 +6,17 @@
  */
 
 
-  'use strict'; // Demande un interprétation stricte du code
+'use strict'; // Demande un interprétation stricte du code
 
-  let a = 'Bonjour';
+let degresCelicius = prompt('Quelle température veux tu transformer ?');
 
-  console.log(a);
+if (isNaN(degresCelicius)) {
+    alert('Entrez un nombre !');
+} else {
+    degresCelicius = parseInt(degresCelicius);
+    let degresFahrenheit = degresCelicius * 9 / 5 + 32;
+    alert(`${degresCelicius}°C = ${degresFahrenheit}°F`);
+}
+
 
 
